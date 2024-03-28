@@ -7,7 +7,7 @@ export default function BrandBanner() {
         gaqno development
       </h1>
       <span className="pt-4 text-center">
-        <p className="text-white text-lg">
+        <p className="text-white text-md md:text-lg">
           Desenvolvimento de aplicações web e mobile com as melhores tecnologias
           do mercado.
         </p>

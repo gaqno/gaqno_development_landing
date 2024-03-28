@@ -45,15 +45,18 @@ export default function Profile() {
                 link: 'https://linkedin.com/gaqno',
               },
             ].map((item, index) => (
-              <button
+              <a
+                href={item.link}
+                target="_blank"
                 key={`contact_${index}`}
-                className="rounded-full pl-4 pr-1 py-4 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
+                className="rounded p-3 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
+                rel="noreferrer"
               >
                 <span>{item.label}</span>
                 <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-2 text-white">
                   <Icon icon={item.ico} />
                 </span>
-              </button>
+              </a>
             ))}
           </div>
         </div>

@@ -24,11 +24,10 @@ export default function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Inicio">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="">Quem sou?</HoveredLink>
+            <HoveredLink href="#sobre">Quem sou?</HoveredLink>
             <HoveredLink href="#techs">Técnologias</HoveredLink>
             <HoveredLink href="#projetos">Projetos</HoveredLink>
-            <HoveredLink href="#sobre">Sobre mim</HoveredLink>
-            <HoveredLink href="#caminho">Meu trajeto</HoveredLink>
+            <HoveredLink href="#caminho">Meu caminho</HoveredLink>
             <HoveredLink href="#contact">Contato</HoveredLink>
           </div>
         </MenuItem>

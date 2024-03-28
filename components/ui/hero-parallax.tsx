@@ -11,10 +11,12 @@ import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 export const HeroParallax = ({
+  id,
   products,
   title,
   description,
 }: {
+  id: string
   title: string
   description: string
   products: {
@@ -60,7 +62,7 @@ export const HeroParallax = ({
   )
   return (
     <div
-      id="projetos"
+      id={id}
       ref={ref}
       className="h-[200vh] pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >

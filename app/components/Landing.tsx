@@ -291,6 +291,7 @@ export default function Landing() {
       <Profile />
       <HoverEffect items={techs} />
       <HeroParallax
+        id="projetos"
         title="Projetos"
         description="Conheça alguns projetos que já desenvolvi."
         products={projects}
@@ -306,6 +307,7 @@ export default function Landing() {
         style={{ border: 'none' }}
       />
       <HeroParallax
+        id="caminho"
         title="Meu caminho"
         description="Conheça algumas empresas e startups "
         products={companies}
