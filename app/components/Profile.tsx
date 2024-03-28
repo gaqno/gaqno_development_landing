@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Profile() {
   return (
     <div id="sobre" className="max-w-auto px-4">
-      <BackgroundGradient className="flex flex-col md:flex-row gap-8 rounded-[22px] w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+      <BackgroundGradient className="flex flex-col md:flex-row items-center gap-8 rounded-[22px] w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
         <Image
           src={ProfileImg}
           alt="Gariel Aquino"
@@ -32,22 +32,17 @@ export default function Profile() {
               {
                 label: 'Entrar em contato',
                 ico: 'mdi:whatsapp',
-                link: 'https://wa.me/5511999999999',
-              },
-              {
-                label: 'Currículo',
-                ico: 'mdi:file-document',
-                link: 'https://wa.me/5511999999999',
+                link: 'https://wa.me/5511991610328',
               },
               {
                 label: 'Projetos',
                 ico: 'mdi:github',
-                link: 'https://wa.me/5511999999999',
+                link: 'https://github.com/gaqno?tab=repositories',
               },
               {
                 label: 'LinkedIn',
                 ico: 'mdi:linkedin',
-                link: 'https://wa.me/5511999999999',
+                link: 'https://linkedin.com/gaqno',
               },
             ].map((item, index) => (
               <button

@@ -1,11 +1,19 @@
 'use client'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 import { twMerge } from 'tailwind-merge'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
-export const IconContainer = ({ icon, text, delay }: any) => {
+export const IconContainer = ({
+  icon,
+  text,
+  delay,
+}: {
+  icon: ReactNode
+  text: string
+  delay: number
+}) => {
   return (
     <motion.div
       initial={{
@@ -21,7 +29,7 @@ export const IconContainer = ({ icon, text, delay }: any) => {
         delay: delay || 0,
       }}
       className={twMerge(
-        'relative z-50 flex flex-col items-center justify-center space-y-2',
+        'relative z-30 flex flex-col items-center justify-center space-y-2',
       )}
     >
       <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-700 bg-slate-800 shadow-inner">

@@ -1,7 +1,7 @@
 'use client'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import Image, { StaticImageData } from 'next/image'
 
 const transition = {
@@ -67,7 +67,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full boder border-transparent bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full boder border-transparent bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-input flex justify-center space-x-4 mx-auto w-[20rem] md:w-full px-8 py-6 "
     >
       {children}
     </nav>
@@ -106,10 +106,19 @@ export const ProductItem = ({
   )
 }
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  href,
+  ...rest
+}: {
+  rest?: LinkProps
+  href: string
+  children: ReactNode
+}) => {
   return (
     <Link
       {...rest}
+      href={href}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black "
     >
       {children}

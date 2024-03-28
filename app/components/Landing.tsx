@@ -10,12 +10,14 @@ import LeninGptImg from '@/public/img/lenin-gpt.png'
 import TovariXImg from '@/public/img/tovarix.png'
 import Profile from './Profile'
 import BrandBanner from './BrandBanner'
-import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card'
-import Link from 'next/link'
 import { Globe } from './Globe'
+import FFIDImg from '@/public/img/ffidLogo.png'
+import NewcoreImg from '@/public/img/newcore.png'
+import RedeAncoraImg from '@/public/img/rede-ancora.jpg'
+import MarvelDashboardImg from '@/public/img/MarvelDashboard.png'
 
 export default function Landing() {
-  const projects = [
+  const techs = [
     {
       icon: 'mdi:react',
       title: 'React.js',
@@ -60,7 +62,7 @@ export default function Landing() {
     },
   ]
 
-  const products = [
+  const projects = [
     {
       title: 'Lenin GPT',
       link: '#projetos/lenin-gpt',
@@ -79,36 +81,29 @@ export default function Landing() {
     {
       title: 'Marvel Dashboard',
       link: 'https://marvel-dashboard.vercel.app',
-      thumbnail:
-        'https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png',
+      thumbnail: RedeAncoraImg,
     },
   ]
 
   const companies = [
     {
-      title: 'Lenin GPT',
-      link: '#projetos/lenin-gpt',
-      thumbnail: LeninGptImg,
+      title: 'Newcore',
+      link: 'https://www.newcore.com.br',
+      thumbnail: NewcoreImg,
     },
     {
-      title: 'TovariX - Assistente Geral',
-      link: 'https://tovarix.vercel.app',
-      thumbnail: TovariXImg,
+      title: 'FFID',
+      link: 'https://www.ffid.com.br',
+      thumbnail: FFIDImg,
     },
     {
-      title: 'Pesca Furiosa',
-      link: 'https://pesca-furiosa.vercel.app',
-      thumbnail: PescaFuriosaImg,
-    },
-    {
-      title: 'Marvel Dashboard',
-      link: 'https://marvel-dashboard.vercel.app',
-      thumbnail:
-        'https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png',
+      title: 'Rede Ancora',
+      link: 'https://www.redeancora.com.br',
+      thumbnail: RedeAncoraImg,
     },
   ]
 
-  const content = [
+  const projectsDetails = [
     {
       title: 'Lenin GPT',
       href: 'lenin-gpt',
@@ -182,7 +177,109 @@ export default function Landing() {
       ),
     },
     {
+      title: 'Marvel Dashboard',
+      href: 'marvel-dashboard',
+      techs: [
+        { icon: 'mdi:vuejs', name: 'Vue 3' },
+        { icon: 'mdi:nuxt', name: 'Nuxt 3' },
+        { icon: 'mdi:tailwind', name: 'TailwindCSS' },
+      ],
+      description:
+        'Desenvolva um dashboard dinâmico e interativo utilizando a MarvelAPI como fonte de dados. Explore um vasto universo de personagens, quadrinhos e séries da Marvel, tudo em uma única plataforma. Navegue facilmente pelos heróis e vilões favoritos, descubra as últimas edições de quadrinhos e acompanhe as séries mais emocionantes. Com uma interface intuitiva e visualmente cativante, mergulhe fundo no universo Marvel e mantenha-se atualizado com as últimas novidades e lançamentos.',
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src={MarvelDashboardImg}
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
       title: 'Novidades em breve...',
+      description: '',
+    },
+  ]
+
+  const companiesDetails = [
+    {
+      title: 'NEWCORE',
+      href: 'https://newcore.com.br/',
+      techs: [
+        { icon: 'mdi:react', name: 'React.js' },
+        { icon: 'mdi:angular', name: 'Angular' },
+        { icon: 'mdi:nodejs', name: 'Node.js' },
+        { icon: 'file-icons:nestjs', name: 'Nest.js' },
+        { icon: 'mdi:database-export-outline', name: 'TypeORM' },
+        { icon: 'material-symbols:view-kanban-outline', name: 'Kanban' },
+      ],
+      description:
+        'Na Newcore, uma startup que desenvolve um aplicativo para auxiliar corretores a fechar vendas e captar leads, eu era desenvolvedor responsável por novas ferramentas e correções no CRM e backoffice.',
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          <Image
+            src={NewcoreImg}
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: 'FFID',
+      href: 'https://ffid.com.br/',
+      techs: [
+        { icon: 'mdi:vuejs', name: 'Vue 2' },
+        { icon: 'mdi:nuxt', name: 'Nuxt 3' },
+        { icon: 'mdi:tailwind', name: 'TailwindCSS' },
+        { icon: 'material-symbols:view-kanban-outline', name: 'Kanban' },
+      ],
+      description:
+        'A FFID é uma plataforma que oferece serviços de disparo de mensagens e outras ferramentas para ajudar empresas a se comunicar com seus clientes. Como desenvolvedor na empresa, minha principal responsabilidade é desenvolver correções e features em todas as plataformas da empresa.',
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src={FFIDImg}
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: 'Rede Ancora',
+      href: 'https://www.redeancora.com.br/',
+      techs: [
+        { icon: 'mdi:react', name: 'React.js' },
+        { icon: 'mdi:language-javascript', name: 'JavaScript Vanilla' },
+        { icon: 'mdi:tailwind', name: 'TailwindCSS' },
+        { icon: 'mdi:git', name: 'Git' },
+        { icon: 'teenyicons:docker-outline', name: 'Docker' },
+        { icon: 'material-symbols:view-kanban-outline', name: 'Kanban' },
+      ],
+      description:
+        'A Rede ANCORA possui mais de 20 anos de atuação no mercado de autopeças e, atualmente é conhecida como uma das únicas redes de distribuição para franqueados no Brasil, sendo também uma das maiores distribuidoras do país, com parcerias entre os maiores fabricantes de reposição de autopeças do mundo.',
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src={RedeAncoraImg}
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: '',
       description: '',
     },
   ]
@@ -192,19 +289,28 @@ export default function Landing() {
       <BackgroundBeams />
       <BrandBanner />
       <Profile />
-      <HoverEffect items={projects} />
+      <HoverEffect items={techs} />
       <HeroParallax
         title="Projetos"
         description="Conheça alguns projetos que já desenvolvi."
-        products={products}
+        products={projects}
       />
-      <StickyScroll id="projetos" content={content} />
+      <StickyScroll id="projetos" content={projectsDetails} />
       <Globe />
+      <iframe
+        src="https://cert.efset.org/Nf7zLt"
+        title="EFSET Certificate"
+        width="100%"
+        height="728px"
+        className="p-10 md:px-40 rounded"
+        style={{ border: 'none' }}
+      />
       <HeroParallax
-        title="Empresas que já trabalhei"
-        description="Conheça algumas empresas que já tive a oportunidade de trabalhar."
+        title="Meu caminho"
+        description="Conheça algumas empresas e startups "
         products={companies}
       />
+      <StickyScroll id="projetos" content={companiesDetails} />
       <RadarComponent />
     </div>
   )

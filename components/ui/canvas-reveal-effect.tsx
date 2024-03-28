@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { cn } from '@/utils/cn'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
@@ -289,6 +291,7 @@ const ShaderMaterial = ({
   )
 }
 
+// eslint-disable-next-line no-use-before-define
 const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
   return (
     <Canvas className="absolute inset-0  h-full w-full">

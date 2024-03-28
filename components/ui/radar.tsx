@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -38,7 +39,7 @@ export const Radar = ({ className }: any) => {
   )
 }
 
-export const Circle = ({ className, children, idx, ...rest }: any) => {
+export const Circle = ({ className, idx, ...rest }: any) => {
   return (
     <motion.div
       {...rest}
