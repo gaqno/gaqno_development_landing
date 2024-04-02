@@ -9,8 +9,8 @@ import {
 import LeninGPTImage from '@/public/img/lenin-gpt.png'
 import TovariXImage from '@/public/img/tovarix.png'
 import PescaFuriosaImg from '@/public/img/pesca-furiosa.png'
-
 import { cn } from '@/utils/cn'
+import { DarkModeToggle } from './DarkModeToggle'
 
 export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
@@ -59,6 +59,7 @@ export default function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
+        <DarkModeToggle />
       </Menu>
     </div>
   )

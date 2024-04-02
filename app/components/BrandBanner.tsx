@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react'
 export default function BrandBanner() {
   return (
     <div className="h-[40rem] p-8 mt-40 w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-6xl text-5xl lg:text-8xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-6xl text-5xl lg:text-8xl font-bold text-center text-black dark:text-white relative z-20">
         gaqno development
       </h1>
       <span className="pt-4 text-center">
@@ -23,7 +23,7 @@ export default function BrandBanner() {
 
       <Icon
         icon="akar-icons:arrow-down"
-        className="animate-bounce text-white text-4xl mt-4"
+        className="animate-bounce text-black dark:text-white text-4xl mt-4"
       />
     </div>
   )
