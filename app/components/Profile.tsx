@@ -27,7 +27,7 @@ export default function Profile() {
             tecnologia e estou sempre em busca de novos desafios. Estou sempre
             em busca de novos desafios!
           </p>
-          <div className="flex flex-row gap-4 mt-auto">
+          <div className="flex flex-col md:flex-row gap-4 mt-auto">
             {[
               {
                 label: 'Entrar em contato',
