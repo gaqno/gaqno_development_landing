@@ -27,7 +27,7 @@ export default function Profile() {
             tecnologia e estou sempre em busca de novos desafios. Estou sempre
             em busca de novos desafios!
           </p>
-          <div className="flex flex-col md:flex-row gap-4 mt-auto">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 mt-auto">
             {[
               {
                 label: 'Entrar em contato',
@@ -49,11 +49,11 @@ export default function Profile() {
                 href={item.link}
                 target="_blank"
                 key={`contact_${index}`}
-                className="rounded p-3 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
+                className="rounded p-3 text-white flex items-center justify-between md:justify-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
                 rel="noreferrer"
               >
                 <span>{item.label}</span>
-                <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-2 text-white">
+                <span className="bg-zinc-700 rounded-full text-md text-white">
                   <Icon icon={item.ico} />
                 </span>
               </a>
