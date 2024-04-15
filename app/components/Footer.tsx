@@ -30,7 +30,7 @@ export default function Footer() {
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <a
-                href="#"
+                href="https://github.com/gaqno"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75"
@@ -54,7 +54,7 @@ export default function Footer() {
 
             <li>
               <a
-                href="#"
+                href="https://linkedin.com/in/gaqno"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75"
